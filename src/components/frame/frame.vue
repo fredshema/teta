@@ -1,0 +1,56 @@
+<template>
+  <div class="frame mx-auto">
+    <img :src="src" />
+  </div>
+</template>
+
+<script>
+export default {
+  props: ["src"],
+};
+</script>
+
+<style lang="scss" scoped>
+.frame {
+  background-color: #ddc;
+  border: solid 5vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: 2px;
+  border-right-color: #eee;
+  border-top-color: #ddd;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+    0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 1rem;
+  padding: 13px;
+  position: relative;
+  text-align: center;
+  &:before {
+    border-radius: 2px;
+    bottom: -2vmin;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+    content: "";
+    left: -2vmin;
+    position: absolute;
+    right: -2vmin;
+    top: -2vmin;
+  }
+  &:after {
+    border-radius: 2px;
+    bottom: -2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    content: "";
+    left: -2.5vmin;
+    position: absolute;
+    right: -2.5vmin;
+    top: -2.5vmin;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+</style>

@@ -1,0 +1,27 @@
+.main-title {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 50px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    width: 50%;
+    height: 2px;
+    content: " ";
+    bottom: 50%;
+    background-color: var(--light);
+  }
+  &::before {
+    margin-left: -53%;
+    text-align: right;
+  }
+  &::after {
+    text-align: left;
+    margin-left: 3%;
+  }
+}
