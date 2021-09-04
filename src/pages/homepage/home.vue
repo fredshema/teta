@@ -4,8 +4,8 @@
       <Navbar />
       <Hero class="flex-grow-1" />
     </div>
-    <Core />
-    <Schedule />
+    <!-- <Core /> -->
+    <!-- <Schedule /> -->
     <Gallery />
     <Foot />
   </div>

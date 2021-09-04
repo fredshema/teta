@@ -10,7 +10,7 @@
       no-gutters
       align-h="center"
       align-v="center"
-      class="flex-column h-100 w-100 position-absolute blur-7"
+      class="flex-column h-100 w-100 position-absolute blur-7 text-center"
     >
       <h1 class="h4 mb-4 text-light">WELCOME TO TETA CHEL EXHIBITION</h1>
       <h2 class="h2 text-primary mb-5">THE CHRONICLES OF A HOPELESS DREAMER</h2>

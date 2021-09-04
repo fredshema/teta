@@ -1,5 +1,5 @@
 <template>
-  <div class="frame mx-auto">
+  <div class="frame mx-auto" @click="$emit('click')">
     <img :src="src" />
   </div>
 </template>
