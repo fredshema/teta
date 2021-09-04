@@ -14,8 +14,8 @@
     >
       <h1 class="h4 mb-4 text-light">WELCOME TO TETA CHEL EXHIBITION</h1>
       <h2 class="h2 text-primary mb-5">THE CHRONICLES OF A HOPELESS DREAMER</h2>
-      <b-button variant="dark" pill class="pb-2 px-3 mt-5">
-        GO TO EXHIBITION
+      <b-button variant="dark" pill class="pb-2 px-3 mt-5" href="https://youtu.be/Iv6-lt7Ydnw" target="_blank">
+        CHECK OUT THE INTRO
         <b-icon-arrow-right-short variant="primary" />
       </b-button>
     </b-row>
