@@ -1,6 +1,6 @@
 <template>
   <div class="frame mx-auto" @click="$emit('click')">
-    <img :src="src" />
+    <b-img-lazy :src="src" />
   </div>
 </template>
 
