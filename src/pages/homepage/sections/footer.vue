@@ -33,7 +33,12 @@
               ></b-textarea>
             </b-form-group>
             <b-form-group>
-              <b-button block variant="light">SEND</b-button>
+              <b-button block variant="light" type="submit">
+                <span v-if="state.loading">
+                  <b-spinner small />
+                </span>
+                <span v-else>SEND</span>
+              </b-button>
             </b-form-group>
           </b-form>
         </b-col>
@@ -97,13 +102,36 @@
 export default {
   data() {
     return {
+      state: { loading: false },
       name: null,
       email: null,
       message: null,
     };
   },
   methods: {
-    send() {},
+    async send() {
+      try {
+        this.state.loading = true;
+        const data = await this.axios.post(
+          "https://api.emailjs.com/api/v1.0/email/send",
+          {
+            user_id: "user_JO6leZ9m5OppROqiYcZHT",
+            service_id: "service_tga6eg8",
+            template_id: "template_9bhgofi",
+            template_params: {
+              name: this.name,
+              email: this.email,
+              message: this.message,
+            },
+          }
+        );
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        this.state.loading = false;
+      }
+    },
   },
 };
 </script>

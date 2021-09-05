@@ -34,8 +34,8 @@
             "
           >
             <image-frame
-              :src="`https://i.ibb.co/${art.id}/${art.fileName}`"
               @click="openModal(art.id)"
+              :src="`https://i.ibb.co/${art.id}/${art.fileName}`"
             />
             <h6 class="text-center mb-4">{{ art.name }}</h6>
             <b-modal
@@ -90,8 +90,10 @@ export default {
       console.log(this.gallery);
     },
     openModal(artID) {
-      console.log(artID);
-      const displayedArt = this.gallery.find((art) => art.id == artID);
+      // console.log(artID);
+      const displayedArt = this.gallery.find((part) =>
+        part.artworks.find((art) => art.id == artID)
+      );
       if (displayedArt) {
         this.$bvModal.show(artID);
       }
