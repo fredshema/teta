@@ -1,10 +1,29 @@
 <template>
   <section class="bg-dark text-light py-5">
     <b-container>
-      <h5 class="main-title">MY ART GALLERY</h5>
+      <h5 class="main-title mb-2">MY ART GALLERY</h5>
 
-      <b-row align-h="start" align-v="center">
-        <b-col cols="12" md="6" lg="4" v-for="(art, i) in gallery" :key="i">
+      <b-row
+        align-h="start"
+        align-v="center"
+        v-for="(part, i) in gallery"
+        :key="i"
+      >
+        <b-col cols="12">
+          <h4
+            class="text-uppercase text-center text-underline mb-4 mt-5"
+            style="text-decoration: underline"
+          >
+            {{ part.name }}
+          </h4>
+        </b-col>
+        <b-col
+          cols="12"
+          md="6"
+          lg="4"
+          v-for="(art, j) in part.artworks"
+          :key="j"
+        >
           <div
             class="
               w-100
@@ -32,7 +51,8 @@
               body-bg-variant="dark"
               body-text-variant="white"
               header-bg-variant="dark"
-              header-text-variant="white" content-class="border border-light"
+              header-text-variant="white"
+              content-class="border border-light"
             >
               <article class="pt-0 pb-4">
                 {{ art.description }}
@@ -59,8 +79,15 @@ export default {
   },
   methods: {
     getImages() {
-      const allImages = require("../../../../info").default.exhibition;
-      this.gallery = allImages.filter((item) => item.id);
+      const allImages = require("../../../../info").default.ex2;
+      this.gallery = [];
+      for (let i = 0; i < allImages.parts.length; i++) {
+        allImages.parts[i].artworks = allImages.parts[i].artworks.filter(
+          (item) => item.id
+        );
+        this.gallery.push(allImages.parts[i]);
+      }
+      console.log(this.gallery);
     },
     openModal(artID) {
       console.log(artID);

@@ -27,6 +27,7 @@ export default {
   padding: 13px;
   position: relative;
   text-align: center;
+  height: 350px;
   &:before {
     border-radius: 2px;
     bottom: -2vmin;
@@ -50,7 +51,7 @@ export default {
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 </style>
