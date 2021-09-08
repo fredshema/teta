@@ -13,8 +13,18 @@
       class="flex-column h-100 w-100 position-absolute blur-7 text-center"
     >
       <h1 class="h4 mb-4 text-light">WELCOME TO TETA CHEL EXHIBITION</h1>
-      <h2 class="h2 text-primary mb-5">THE CHRONICLES OF A HOPELESS DREAMER</h2>
-      <b-button variant="dark" pill class="pb-2 px-3 mt-5" href="https://youtu.be/Iv6-lt7Ydnw" target="_blank">
+      <h2 class="h2 text-primary">THE CHRONICLES OF A HOPELESS DREAMER</h2>
+      <i class="text-light mb-4"
+        >An intertwined journey between mood, crucible and healing & creativity
+        through art.</i
+      >
+      <b-button
+        variant="dark"
+        pill
+        class="pb-2 px-3 mt-5"
+        href="https://youtu.be/Iv6-lt7Ydnw"
+        target="_blank"
+      >
         CHECK OUT THE INTRO
         <b-icon-arrow-right-short variant="primary" />
       </b-button>
@@ -38,5 +48,4 @@ export default {};
     filter: brightness(0.5);
   }
 }
-
 </style>

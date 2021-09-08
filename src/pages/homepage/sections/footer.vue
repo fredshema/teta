@@ -76,20 +76,42 @@
             </h6>
           </b-row>
           <b-row align-h="end">
-            <h6>Launching on 12.09.2021</h6>
+            <h6>Ending on 25.09.2021</h6>
           </b-row>
           <b-row align-h="end">
             <b-col cols="1">
-              <a href="#" class="text-light"><b-icon-facebook /></a>
+              <a
+                href="https://web.facebook.com/teta.micheline"
+                target="_blank"
+                class="text-light"
+                ><b-icon-facebook
+              /></a>
             </b-col>
             <b-col cols="1">
-              <a href="#" class="text-light"> <b-icon-instagram /></a>
+              <a
+                href="https://www.instagram.com/teta_chel"
+                target="_blank"
+                class="text-light"
+              >
+                <b-icon-instagram
+              /></a>
             </b-col>
             <b-col cols="1">
-              <a href="#" class="text-light"><b-icon-twitter /></a>
+              <a
+                href="https://twitter.com/tetachel"
+                target="_blank"
+                class="text-light"
+                ><b-icon-twitter
+              /></a>
             </b-col>
             <b-col cols="1">
-              <a href="#" class="text-light"> <b-icon-youtube /></a>
+              <a
+                href="https://www.youtube.com/channel/UCyTGn98Cpr0_ptkEu3nvAeA"
+                target="_blank"
+                class="text-light"
+              >
+                <b-icon-youtube
+              /></a>
             </b-col>
           </b-row>
         </b-col>

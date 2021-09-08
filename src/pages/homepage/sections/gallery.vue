@@ -6,16 +6,15 @@
       <b-row
         align-h="start"
         align-v="center"
+        class="mt-3 p-3 border rounded mx-0 mt-5"
         v-for="(part, i) in gallery"
         :key="i"
       >
-        <b-col cols="12">
-          <h4
-            class="text-uppercase text-center text-underline mb-4 mt-5"
-            style="text-decoration: underline"
-          >
+        <b-col cols="12" class="text-center mb-4">
+          <h4 class="text-uppercase text-center mb-2">
             {{ part.name }}
           </h4>
+          <i class="d-block" v-html="part.theme"></i>
         </b-col>
         <b-col
           cols="12"
@@ -34,12 +33,12 @@
             "
           >
             <image-frame
-              @click="openModal(art.id)"
+              @click="openModal(art.id, i, j)"
               :src="`https://i.ibb.co/${art.id}/${art.fileName}`"
             />
             <h6 class="text-center mb-4">{{ art.name }}</h6>
             <b-modal
-              :id="art.id"
+              :id="`${art.id}-${i}-${j}`"
               :title="art.name"
               no-stacking
               hide-footer
@@ -54,9 +53,7 @@
               header-text-variant="white"
               content-class="border border-light"
             >
-              <article class="pt-0 pb-4">
-                {{ art.description }}
-              </article>
+              <article class="pb-4 pt-3" v-html="art.description"></article>
             </b-modal>
           </div>
         </b-col>
@@ -79,7 +76,7 @@ export default {
   },
   methods: {
     getImages() {
-      const allImages = require("../../../../info").default.ex2;
+      const allImages = require("../../../../info").default.exhibition;
       this.gallery = [];
       for (let i = 0; i < allImages.parts.length; i++) {
         allImages.parts[i].artworks = allImages.parts[i].artworks.filter(
@@ -89,13 +86,13 @@ export default {
       }
       console.log(this.gallery);
     },
-    openModal(artID) {
+    openModal(artID, i, j) {
       // console.log(artID);
       const displayedArt = this.gallery.find((part) =>
         part.artworks.find((art) => art.id == artID)
       );
       if (displayedArt) {
-        this.$bvModal.show(artID);
+        this.$bvModal.show(`${artID}-${i}-${j}`);
       }
     },
   },

@@ -4,7 +4,8 @@
       <Navbar />
       <Hero class="flex-grow-1" />
     </div>
-    <!-- <Core /> -->
+    <Overview />
+    <Biography />
     <!-- <Schedule /> -->
     <Gallery />
     <Foot />
@@ -13,10 +14,17 @@
 
 <script>
 import { Navbar } from "../../components/index";
-import { Hero, Core, Schedule, Gallery, Foot } from "./sections/index";
+import {
+  Hero,
+  Overview,
+  Schedule,
+  Biography,
+  Gallery,
+  Foot,
+} from "./sections/index";
 export default {
   name: "landing-page",
-  components: { Navbar, Hero, Core, Schedule, Gallery, Foot },
+  components: { Navbar, Hero, Overview, Biography, Schedule, Gallery, Foot },
 };
 </script>
 
