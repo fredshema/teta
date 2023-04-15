@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="dark" class="pb-2">
+  <b-navbar toggleable="md" type="dark" variant="dark" class="pt-3 pb-1">
     <b-navbar-brand href="#">TETA CHEL</b-navbar-brand>
 
     <b-navbar-toggle target="navbar-toggle-collapse">
@@ -10,14 +10,11 @@
     </b-navbar-toggle>
 
     <b-collapse id="navbar-toggle-collapse" is-nav>
-      <b-navbar-nav class="ml-auto align-items-end">
+      <b-navbar-nav class="mx-auto align-items-center">
         <b-nav-item :to="{ name: 'Home' }" class="custom-link small">
           <span>HOME</span>
         </b-nav-item>
-        <b-nav-item
-          :to="{ name: 'artworks' }"
-          class="custom-link small"
-        >
+        <b-nav-item :to="{ name: 'artworks' }" class="custom-link small">
           <span>ART WORKS</span>
         </b-nav-item>
         <b-nav-item class="custom-link small" href="#">
@@ -29,6 +26,8 @@
         <b-nav-item :to="{ name: 'about' }" class="custom-link small">
           <span>ABOUT</span>
         </b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav class="align-items-center">
         <b-nav-item href="#">
           <b-button pill variant="primary" class="px-2" size="sm">
             <span class="small font-weight-bold text-top"> GET IN TOUCH </span>
@@ -48,6 +47,8 @@ export default {};
   span {
     border-bottom: 1px solid transparent;
     transition: all 0.2s ease-in-out;
+    color: var(--white) !important;
+    opacity: 1 !important;
   }
 
   &:hover,
