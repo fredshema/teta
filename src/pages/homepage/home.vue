@@ -4,10 +4,10 @@
       <Navbar />
       <Hero class="flex-grow-1" />
     </div>
-    <Overview />
-    <Biography />
+    <!-- <Overview /> -->
+    <!-- <Biography /> -->
     <!-- <Schedule /> -->
-    <Gallery />
+    <!-- <Gallery /> -->
     <Foot />
   </div>
 </template>
@@ -21,7 +21,7 @@ import {
   Biography,
   Gallery,
   Foot,
-} from "./sections/index";
+} from "../sections";
 export default {
   name: "landing-page",
   components: { Navbar, Hero, Overview, Biography, Schedule, Gallery, Foot },

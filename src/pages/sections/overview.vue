@@ -37,15 +37,15 @@ export default {
     return {
       cores: [
         {
-          image: require("../../../assets/images/logo.png"),
+          image: require("../../assets/images/logo.png"),
           title: "Creativity",
         },
         {
-          image: require("../../../assets/images/logo.png"),
+          image: require("../../assets/images/logo.png"),
           title: "Creativity",
         },
         {
-          image: require("../../../assets/images/logo.png"),
+          image: require("../../assets/images/logo.png"),
           title: "Healing",
         },
       ],

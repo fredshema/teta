@@ -1,7 +1,7 @@
 <template>
   <section class="bg-dark text-light py-5">
     <b-container class="">
-      <b-row>
+      <b-row align-h="between">
         <b-col cols="12" md="6" lg="6">
           <b-form @submit.prevent="send" class="pr-0 pr-md-3 pr-lg-4">
             <b-form-group>
@@ -42,26 +42,6 @@
             </b-form-group>
           </b-form>
         </b-col>
-        <b-col cols="12" md="3" lg="2">
-          <h5 class="mb-3">QUICK LINKS</h5>
-          <ul class="list-group">
-            <li class="list-item">
-              <b-link>Home</b-link>
-            </li>
-            <li class="list-item">
-              <b-link>Gallery</b-link>
-            </li>
-            <li class="list-item">
-              <b-link>Timeline</b-link>
-            </li>
-            <li class="list-item">
-              <b-link>About</b-link>
-            </li>
-            <li class="list-item">
-              <b-link>My Bio</b-link>
-            </li>
-          </ul>
-        </b-col>
         <b-col cols="12" md="3" lg="4">
           <b-row align-h="end" align-v="center" class="mb-4">
             <div class="logo-box rounded text-primary">TETA CHEL</div>
@@ -74,9 +54,6 @@
                 >michelineteta@gmail.com</a
               >
             </h6>
-          </b-row>
-          <b-row align-h="end">
-            <h6>Ending on 25.09.2021</h6>
           </b-row>
           <b-row align-h="end">
             <b-col cols="1">

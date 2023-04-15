@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { CalendarIcon } from "../../../components/index";
+import { CalendarIcon } from "../../components";
 export default {
   components: {
     CalendarIcon,

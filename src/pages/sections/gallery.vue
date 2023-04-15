@@ -1,7 +1,7 @@
 <template>
   <section class="bg-dark text-light py-5">
     <b-container>
-      <h5 class="main-title mb-2">MY ART GALLERY</h5>
+      <h5 class="main-title mb-2">ART GALLERY</h5>
 
       <b-row
         align-h="start"
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { ImageFrame } from "../../../components/index";
+import { ImageFrame } from "../../components";
 export default {
   components: { ImageFrame },
   data() {
@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     getImages() {
-      const allImages = require("../../../../info").default.exhibition;
+      const allImages = require("../../../info").default.exhibition;
       this.gallery = [];
       for (let i = 0; i < allImages.parts.length; i++) {
         allImages.parts[i].artworks = allImages.parts[i].artworks.filter(

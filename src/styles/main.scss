@@ -4,6 +4,7 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "node_modules/bootstrap-vue/src/index.scss";
 @import "node_modules/bootstrap-vue/src/icons.scss";
+@import "~@splidejs/splide/dist/css/splide.min.css";
 
 .top-0 {
   top: 0;
@@ -11,4 +12,8 @@
 
 .z-index-999 {
   z-index: 999;
+}
+
+.text-top{
+  vertical-align: text-top;
 }

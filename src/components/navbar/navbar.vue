@@ -1,10 +1,5 @@
 <template>
-  <b-navbar
-    toggleable="md"
-    type="dark"
-    variant="transaprent"
-    class="position-absolute z-index-999 w-100"
-  >
+  <b-navbar toggleable="md" type="dark" variant="dark" class="pb-2">
     <b-navbar-brand href="#">TETA CHEL</b-navbar-brand>
 
     <b-navbar-toggle target="navbar-toggle-collapse">
@@ -15,15 +10,29 @@
     </b-navbar-toggle>
 
     <b-collapse id="navbar-toggle-collapse" is-nav>
-      <b-navbar-nav class="ml-auto align-items-center">
-        <b-nav-item href="#">HOME</b-nav-item>
-        <b-nav-item href="#">ART WORKS</b-nav-item>
-        <b-nav-item href="#">ABOUT</b-nav-item>
-        <b-nav-item href="#">BIO</b-nav-item>
+      <b-navbar-nav class="ml-auto align-items-end">
+        <b-nav-item :to="{ name: 'Home' }" class="custom-link small">
+          <span>HOME</span>
+        </b-nav-item>
+        <b-nav-item
+          :to="{ name: 'artworks' }"
+          class="custom-link small"
+        >
+          <span>ART WORKS</span>
+        </b-nav-item>
+        <b-nav-item class="custom-link small" href="#">
+          <span>SHOP</span>
+        </b-nav-item>
+        <b-nav-item class="custom-link small" href="#">
+          <span>EXHIBITIONS</span>
+        </b-nav-item>
+        <b-nav-item :to="{ name: 'about' }" class="custom-link small">
+          <span>ABOUT</span>
+        </b-nav-item>
         <b-nav-item href="#">
-          <b-button pill variant="primary" class="px-3" size="sm"
-            >GET IN TOUCH</b-button
-          >
+          <b-button pill variant="primary" class="px-2" size="sm">
+            <span class="small font-weight-bold text-top"> GET IN TOUCH </span>
+          </b-button>
         </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -34,5 +43,19 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.custom-link a {
+  span {
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover,
+  &.router-link-exact-active {
+    span {
+      color: var(--primary) !important;
+      border-color: var(--primary) !important;
+    }
+  }
+}
 </style>

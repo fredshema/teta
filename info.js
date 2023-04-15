@@ -1,4 +1,37 @@
 export default {
+  slideshow: [
+    {
+      title: "Mood",
+      theme:
+        "The tiny world i lived in, the tiny world nobody else belonged in.",
+      image: {
+        name: "The Departure",
+        id: "SXy24kb",
+        displayID: "nsmTNX9",
+        fileName: "The-departure.jpg",
+      },
+    },
+    {
+      title: "Crucible",
+      theme: "I opened my heart art didn't judge me.",
+      image: {
+        name: "Memories 1",
+        id: "cT6dcGG",
+        displayID: "j4yFvcc",
+        fileName: "memories-1.jpg",
+      },
+    },
+    {
+      title: "Healing & Creativity",
+      theme: "Ink on paper, rewrite brush on canvas, repaint.",
+      image: {
+        name: "Mirror",
+        displayID: "5sWdvzv",
+        id: "vLxbmrm",
+        fileName: "Mirror.jpg",
+      },
+    },
+  ],
   exhibition: {
     parts: [
       {
