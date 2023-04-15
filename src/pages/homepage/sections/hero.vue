@@ -41,6 +41,9 @@ export default {};
   position: absolute;
   width: 100%;
   height: 100%;
+  background: black;
+  padding-top: 70px;
+  
   img {
     width: 100%;
     height: 100%;

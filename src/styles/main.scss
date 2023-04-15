@@ -1,6 +1,14 @@
-@import 'custom';
-@import 'variables';
+@import "custom";
+@import "variables";
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import "node_modules/bootstrap-vue/src/index.scss";
 @import "node_modules/bootstrap-vue/src/icons.scss";
+
+.top-0 {
+  top: 0;
+}
+
+.z-index-999 {
+  z-index: 999;
+}

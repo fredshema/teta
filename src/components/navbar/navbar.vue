@@ -1,5 +1,10 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="dark">
+  <b-navbar
+    toggleable="md"
+    type="dark"
+    variant="transaprent"
+    class="position-absolute z-index-999 w-100"
+  >
     <b-navbar-brand href="#">TETA CHEL</b-navbar-brand>
 
     <b-navbar-toggle target="navbar-toggle-collapse">
@@ -16,7 +21,9 @@
         <b-nav-item href="#">ABOUT</b-nav-item>
         <b-nav-item href="#">BIO</b-nav-item>
         <b-nav-item href="#">
-          <b-button pill variant="primary" class="px-3" size="sm">GET IN TOUCH</b-button>
+          <b-button pill variant="primary" class="px-3" size="sm"
+            >GET IN TOUCH</b-button
+          >
         </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -27,5 +34,5 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>
