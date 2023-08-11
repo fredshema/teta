@@ -1,4 +1,18 @@
 export default {
+  personal: {
+    name: "Teta Micheline",
+    email: "michelineteta@gmail.com",
+    phone: {
+      label: "(+250) 789 547 667",
+      number: "+250789547667",
+    },
+    social: {
+      facebook: "https://www.facebook.com/teta.micheline",
+      instagram: "https://www.instagram.com/teta_chel/",
+      twitter: "https://twitter.com/tetachel",
+      youtube: "https://www.youtube.com/channel/UCyTGn98Cpr0_ptkEu3nvAeA"
+    },
+  },
   slideshow: [
     {
       title: "Mood",

@@ -16,12 +16,34 @@
     bottom: 50%;
     background-color: var(--light);
   }
+
   &::before {
     margin-left: -53%;
     text-align: right;
   }
+
   &::after {
     text-align: left;
     margin-left: 3%;
   }
+}
+
+.max-height {
+  max-height: 800px;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-width-2 {
+  border-width: 2px;
+}
+
+.dotted-border{
+  border-style: dotted;
+  border-width: 1px;
+  border-inline: none;
 }

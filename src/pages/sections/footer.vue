@@ -5,32 +5,16 @@
         <b-col cols="12" md="6" lg="6">
           <b-form @submit.prevent="send" class="pr-0 pr-md-3 pr-lg-4">
             <b-form-group>
-              <b-input
-                v-model="name"
-                trim
-                required
-                placeholder="What's your name?"
-                class="bg-dark border-light text-light input"
-              />
+              <b-input v-model="name" trim required placeholder="Your full name"
+                class="bg-dark border-light text-light input" />
             </b-form-group>
             <b-form-group>
-              <b-input
-                type="email"
-                class="bg-dark border-light text-light input"
-                trim
-                required
-                v-model="email"
-                placeholder="What's your email?"
-              />
+              <b-input type="email" class="bg-dark border-light text-light input" trim required v-model="email"
+                placeholder="Your email" />
             </b-form-group>
             <b-form-group>
-              <b-textarea
-                trim
-                v-model="message"
-                required
-                placeholder="Tell me something"
-                class="bg-dark border-light text-light input"
-              ></b-textarea>
+              <b-textarea trim v-model="message" required rows="5" placeholder="Message here"
+                class="bg-dark border-light text-light input"></b-textarea>
             </b-form-group>
             <b-form-group>
               <b-button block variant="light" type="submit">
@@ -42,53 +26,44 @@
             </b-form-group>
           </b-form>
         </b-col>
-        <b-col cols="12" md="3" lg="4">
-          <b-row align-h="end" align-v="center" class="mb-4">
+        <b-col cols="12" md="4" lg="4">
+          <b-row align-v="center" class="mb-4 justify-content-center justify-content-md-end mt-4 mt-md-0">
             <div class="logo-box rounded text-primary">TETA CHEL</div>
           </b-row>
-          <b-row align-h="end" class="mb-4">
-            <h6>Contact: <a href="tel:+250789547667">(+250) 789 547 667</a></h6>
+          <b-row class="mb-4 flex-column align-items-center align-items-md-end">
+            <h6>
+              Contact:
+              <a :href="'tel:' + personalInfo.phone.number">
+                {{ personalInfo.phone.label }}
+              </a>
+            </h6>
             <h6>
               Email:
-              <a href="mailto:michelineteta@gmail.com"
-                >michelineteta@gmail.com</a
-              >
+              <a :href="'mailto:' + personalInfo.email">
+                {{ personalInfo.email }}
+              </a>
             </h6>
           </b-row>
-          <b-row align-h="end">
+          <b-row align-h="end" class="justify-content-center justify-content-md-end">
             <b-col cols="1">
-              <a
-                href="https://web.facebook.com/teta.micheline"
-                target="_blank"
-                class="text-light"
-                ><b-icon-facebook
-              /></a>
+              <a :href="personalInfo.social.facebook" target="_blank" class="text-light">
+                <b-icon-facebook />
+              </a>
             </b-col>
             <b-col cols="1">
-              <a
-                href="https://www.instagram.com/teta_chel"
-                target="_blank"
-                class="text-light"
-              >
-                <b-icon-instagram
-              /></a>
+              <a :href="personalInfo.social.instagram" target="_blank" class="text-light">
+                <b-icon-instagram />
+              </a>
             </b-col>
             <b-col cols="1">
-              <a
-                href="https://twitter.com/tetachel"
-                target="_blank"
-                class="text-light"
-                ><b-icon-twitter
-              /></a>
+              <a :href="personalInfo.social.twitter" target="_blank" class="text-light">
+                <b-icon-twitter />
+              </a>
             </b-col>
             <b-col cols="1">
-              <a
-                href="https://www.youtube.com/channel/UCyTGn98Cpr0_ptkEu3nvAeA"
-                target="_blank"
-                class="text-light"
-              >
-                <b-icon-youtube
-              /></a>
+              <a :href="personalInfo.social.youtube" target="_blank" class="text-light">
+                <b-icon-youtube />
+              </a>
             </b-col>
           </b-row>
         </b-col>
@@ -106,6 +81,11 @@ export default {
       email: null,
       message: null,
     };
+  },
+  computed: {
+    personalInfo() {
+      return require("../../../info").default.personal;
+    }
   },
   methods: {
     async send() {
@@ -142,6 +122,7 @@ textarea {
     color: #a7adb9fc !important;
   }
 }
+
 .list-item {
   list-style: none;
   padding: 5px 4px;
@@ -149,12 +130,14 @@ textarea {
 
   a {
     color: var(--light);
+
     &:hover {
       text-decoration: none;
       opacity: 0.7;
     }
   }
 }
+
 .logo-box {
   background-color: black;
   height: 100px;

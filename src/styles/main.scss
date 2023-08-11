@@ -6,6 +6,10 @@
 @import "node_modules/bootstrap-vue/src/icons.scss";
 @import "~@splidejs/splide/dist/css/splide.min.css";
 
+html, body{
+  background-color: var(--dark);
+}
+
 .top-0 {
   top: 0;
 }

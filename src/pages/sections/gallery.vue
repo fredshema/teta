@@ -1,59 +1,36 @@
 <template>
   <section class="bg-dark text-light py-5">
     <b-container>
-      <h5 class="main-title mb-2">ART GALLERY</h5>
+      <h5 class="text-center">ART GALLERY</h5>
 
-      <b-row
-        align-h="start"
-        align-v="center"
-        class="mt-3 p-3 border rounded mx-0 mt-5"
-        v-for="(part, i) in gallery"
-        :key="i"
-      >
-        <b-col cols="12" class="text-center mb-4">
+      <b-row align-h="start" align-v="center" class="mt-3 p-3 rounded mx-0 mt-5" v-for="(part, i) in gallery"
+        :key="i">
+        <b-col cols="12" class="text-center">
           <h4 class="text-uppercase text-center mb-2">
             {{ part.name }}
           </h4>
-          <i class="d-block" v-html="part.theme"></i>
+          <i class="d-block main-title" v-html="part.theme"></i>
         </b-col>
-        <b-col
-          cols="12"
-          md="6"
-          lg="4"
-          v-for="(art, j) in part.artworks"
-          :key="j"
-        >
-          <div
-            class="
+        <b-col cols="12" md="6" lg="4" v-for="(art, j) in part.artworks" :key="j">
+          <div class="
               w-100
               d-flex
               align-items-center
               justify-content-center
               flex-column
-            "
-          >
-            <image-frame
-              @click="openModal(art.id, i, j)"
-              :src="`https://i.ibb.co/${art.id}/${art.fileName}`"
-            />
-            <h6 class="text-center mb-4">{{ art.name }}</h6>
-            <b-modal
-              :id="`${art.id}-${i}-${j}`"
-              :title="art.name"
-              no-stacking
-              hide-footer
-              header-class="border-0"
-              title-class="h6 font-weight-bold"
-              body-class="pt-0"
-              centered
-              scrollable
-              body-bg-variant="dark"
-              body-text-variant="white"
-              header-bg-variant="dark"
-              header-text-variant="white"
-              content-class="border border-light"
-            >
+            ">
+            <image-frame @click="openModal(art.id, i, j)" :src="`https://i.ibb.co/${art.id}/${art.fileName}`" />
+            <h6 class="text-center mb-4 font-weight-bold">{{ art.name }}</h6>
+            <b-modal :id="`${art.id}-${i}-${j}`" :title="art.name" no-stacking hide-footer header-class="border-0"
+              title-class="h5 font-weight-bold" body-class="pt-0" centered scrollable body-bg-variant="dark"
+              body-text-variant="white" header-bg-variant="dark" header-text-variant="white"
+              content-class="border border-light">
               <article class="pb-4 pt-3" v-html="art.description"></article>
+              <div class="flex-center">
+                <b-button class="mt-4 px-5">
+                  Close
+                </b-button>
+              </div>
             </b-modal>
           </div>
         </b-col>

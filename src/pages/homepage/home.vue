@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="vh-100 d-flex flex-column">
+    <div class="vh-100 d-flex flex-column max-height">
       <Navbar />
       <Hero class="flex-grow-1" />
     </div>
     <!-- <Overview /> -->
-    <!-- <Biography /> -->
+    <ExhibitionPromo />
+    <Biography />
     <!-- <Schedule /> -->
     <!-- <Gallery /> -->
     <Foot />
@@ -21,12 +22,12 @@ import {
   Biography,
   Gallery,
   Foot,
+  ExhibitionPromo,
 } from "../sections";
 export default {
   name: "landing-page",
-  components: { Navbar, Hero, Overview, Biography, Schedule, Gallery, Foot },
+  components: { Navbar, Hero, Overview, Biography, Schedule, Gallery, Foot, ExhibitionPromo },
 };
 </script>
 
-<style>
-</style>
+<style></style>

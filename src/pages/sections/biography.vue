@@ -5,7 +5,7 @@
       <b-row align-h="center" align-v="center">
         <b-col cols="12" md="11">
           <p class="text-justify">
-            Micheline TETA is a 22-year-old Rwandan lady born and raised in
+            Micheline TETA is a Rwandan lady born and raised in
             Gisenyi, Rwanda's western province. She completed her ordinary level
             at Ecole secondaire Saint Vincent from 2014 to 2016, after
             graduating her primary school in 2013 at EPEGI. Her interest in the

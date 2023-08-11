@@ -12,8 +12,8 @@ export default {
 
 <style lang="scss" scoped>
 .frame {
-  background-color: #ddc;
-  border: solid 5vmin #eee;
+  background-color: #ddd;
+  border: solid 4vmin #eee;
   border-bottom-color: #fff;
   border-left-color: #eee;
   border-radius: 2px;
@@ -24,7 +24,7 @@ export default {
   box-sizing: border-box;
   display: inline-block;
   margin: 1rem;
-  padding: 13px;
+  padding: 1px;
   position: relative;
   text-align: center;
   height: 350px;
